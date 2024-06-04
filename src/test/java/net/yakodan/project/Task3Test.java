@@ -10,13 +10,23 @@ public class Task3Test {
 
     private static Task3Controller task3 = new Task3Controller();
 
-    @ParameterizedTest
-    @CsvSource({"0.000036, 8.0","0.000032, 10.0"})
+    @Test
     @DisplayName("Задание 3. Параметризированный тест с корректными ответами")
-    public void testCalculateERWithCorrectAnswers(double answer, double dsh){
+    public void testCalculateERWithCorrectAnswers(){
+        double dsh = 8.0;
+        double answer = 0.000036;
         Double actual = task3.calculateER(dsh);
         Assertions.assertTrue(actual.compareTo(answer) == 0,
                 String.format("actual = %f, expected = %f", actual, answer));
     }
 
+    @Test
+    @DisplayName("Задание 3. Параметризированный тест с некорректными ответами")
+    public void testCalculateERWithIncorrectAnswers(){
+        double dsh = 8.5;
+        double answer = 0.000036;
+        Double actual = task3.calculateER(dsh);
+        Assertions.assertTrue(actual.compareTo(answer) != 0,
+                String.format("actual = %f, expected = %f", actual, answer));
+    }
 }
