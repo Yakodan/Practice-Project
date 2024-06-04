@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="320.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.Task4Controller">
+   <children>
+      <Label layoutX="152.0" layoutY="14.0" text="Задание 4">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="126.0" layoutY="262.0" mnemonicParsing="false" onAction="#showAnswer" text="Рассчитать er">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Slider fx:id="dshSlider" blockIncrement="0.0" layoutX="165.0" layoutY="116.0" majorTickUnit="0.5" max="10.0" min="8.0" minorTickCount="0" onMouseReleased="#setDshLabel" prefHeight="44.0" prefWidth="154.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="8.0" />
+      <Label layoutX="30.0" layoutY="88.0" text="Введите &quot;d &quot;:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="dshLabel" alignment="CENTER" layoutX="200.0" layoutY="70.0" prefHeight="44.0" prefWidth="84.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Slider fx:id="e0Slider" blockIncrement="0.0" layoutX="165.0" layoutY="206.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" onMouseReleased="#setE0Label" prefHeight="44.0" prefWidth="154.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" />
+      <Label layoutX="30.0" layoutY="178.0" text="Введите &quot;e &quot;:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="e0Label" alignment="CENTER" layoutX="200.0" layoutY="160.0" prefHeight="44.0" prefWidth="84.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="100.0" text="ш" />
+      <Label layoutX="128.0" layoutY="191.0" text="0" />
+   </children>
+</AnchorPane>

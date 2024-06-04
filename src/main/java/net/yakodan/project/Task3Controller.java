@@ -2,22 +2,26 @@ package net.yakodan.project;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 
 
 public class Task3Controller {
 
     @FXML
-    private Label answerLabel;
+    private Label dshLabel;
+    @FXML
+    private Slider dshSlider;
+
+    @FXML
+    public void setDshLabel(){
+        double value = dshSlider.getValue();
+        String dsh = String.format("%sмм", value);
+        dshLabel.setText(dsh);
+    }
 
     @FXML
     public void showAnswer(){
-        String answer = new String();
-        answer += "R = 12мм, e0 = 0.003мм\n";
-        for(double dsh = 8.0;dsh<=10.0;dsh+=0.5){
-            double er = calculateER(dsh);
-            answer += String.format("dш = %sмм: er = %fмм\n", dsh, er);
-        }
-        answerLabel.setText(answer);
+        FxDialogs.showInformation("Результат", String.format("\"er\" равно: %fмм", calculateER(dshSlider.getValue())));
     }
 
     public double calculateER(double dsh){

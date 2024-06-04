@@ -39,7 +39,7 @@
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task4Button" layoutX="58.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 4">
+        <Button fx:id="task4Button" layoutX="58.0" layoutY="251.0" mnemonicParsing="false" onAction="#onTask4ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 4">
             <font>
                 <Font size="18.0" />
             </font>
