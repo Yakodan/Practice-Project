@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="634.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.MainController">
+    <children>
+        <ImageView fitHeight="75.0" fitWidth="73.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pictures/imit.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="202.0" layoutY="40.0" prefHeight="36.0" prefWidth="414.0" text="Кодинцев Даниил, группа 02221-ДБ">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="518.0" layoutY="453.0" prefHeight="30.0" prefWidth="98.0" text="Вариант 8">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="task1Button" layoutX="58.0" layoutY="145.0" mnemonicParsing="false" onAction="#onTask1ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 1">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task2Button" layoutX="244.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 2">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task3Button" layoutX="430.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 3">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task4Button" layoutX="58.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 4">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task5Button" layoutX="244.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 5">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task6Button" layoutX="430.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 6">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="task7Button" layoutX="244.0" layoutY="357.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 7">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+    </children>
+</fx:root>
