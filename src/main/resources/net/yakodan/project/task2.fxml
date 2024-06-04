@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="272.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.Task2Controller">
+   <children>
+      <Label layoutX="14.0" layoutY="64.0" text="Введите &quot;Q &quot;:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputQ0" layoutX="136.0" layoutY="57.0" prefHeight="25.0" prefWidth="71.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="14.0" layoutY="111.0" text="Введите &quot;α&quot;:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputAlf" layoutX="136.0" layoutY="104.0" prefHeight="25.0" prefWidth="71.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="inputD0" layoutX="136.0" layoutY="151.0" prefHeight="25.0" prefWidth="71.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="110.0" layoutY="214.0" mnemonicParsing="false" onAction="#showMt" text="Рассчитать &quot;Мт&quot;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="140.0" layoutY="14.0" text="Задание 2">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="47.0" prefHeight="34.0" prefWidth="172.0" text="Выберите параметры:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="79.0" text="0" />
+      <Label layoutX="14.0" layoutY="157.0" text="Введите &quot;d &quot;:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="172.0" text="0" />
+      <CheckBox fx:id="lubeCheckBox" layoutX="220.0" layoutY="87.0" mnemonicParsing="false" text="Смазака МК-8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <RadioButton layoutX="220.0" layoutY="122.0" mnemonicParsing="false" selected="true" text="Первая затяжка">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="puffGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="220.0" layoutY="154.0" mnemonicParsing="false" text="Десятая затяжка" toggleGroup="$puffGroup">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

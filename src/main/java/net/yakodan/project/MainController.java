@@ -12,10 +12,22 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController  implements Initializable {
+public class MainController implements Initializable {
 
     @FXML
-    Button task1Button;
+    private Button task1Button;
+    @FXML
+    private Button task2Button;
+    @FXML
+    private Button task3Button;
+    @FXML
+    private Button task4Button;
+    @FXML
+    private Button task5Button;
+    @FXML
+    private Button task6Button;
+    @FXML
+    private Button task7Button;
 
     @FXML
     public void onTask1ButtonClicked(){
@@ -33,6 +45,41 @@ public class MainController  implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void onTask2ButtonClicked(){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task2.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Задание 2");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(task2Button.getScene().getWindow());
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onTask3ButtonClicked(){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task3.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Задание 3");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(task3Button.getScene().getWindow());
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

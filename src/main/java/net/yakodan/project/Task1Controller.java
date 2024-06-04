@@ -1,21 +1,20 @@
 package net.yakodan.project;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import javax.swing.*;
 
 public class Task1Controller {
 
     @FXML
-    public TextField inputA;
-    public TextField inputB;
-    public TextField inputR;
+    private TextField inputA;
+    @FXML
+    private TextField inputB;
+    @FXML
+    private TextField inputR;
 
     @FXML
-    public void showCalcR(){
+    public void showR(){
         double A;
         double B;
         double R;

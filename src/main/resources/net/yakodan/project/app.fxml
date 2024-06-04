@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="634.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.MainController">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="634.0" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.MainController">
     <children>
         <ImageView fitHeight="75.0" fitWidth="73.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -29,12 +29,12 @@
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task2Button" layoutX="244.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 2">
+        <Button fx:id="task2Button" layoutX="244.0" layoutY="145.0" mnemonicParsing="false" onAction="#onTask2ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 2">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task3Button" layoutX="430.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 3">
+        <Button fx:id="task3Button" layoutX="430.0" layoutY="145.0" mnemonicParsing="false" onAction="#onTask3ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 3">
             <font>
                 <Font size="18.0" />
             </font>
