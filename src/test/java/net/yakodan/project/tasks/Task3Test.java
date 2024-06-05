@@ -1,14 +1,13 @@
-package net.yakodan.project;
+package net.yakodan.project.tasks;
 
+import net.yakodan.project.tasks.Task3;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 public class Task3Test {
 
-    private static Task3Controller task4 = new Task3Controller();
+    private static Task3 task4 = new Task3();
 
     @Test
     @DisplayName("Задание 3. Параметризированный тест с корректными ответами")

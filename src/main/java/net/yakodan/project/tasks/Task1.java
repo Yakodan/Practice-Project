@@ -1,11 +1,11 @@
-package net.yakodan.project;
+package net.yakodan.project.tasks;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import net.yakodan.project.fxdialogs.FxDialogs;
 
-public class Task1Controller {
+public class Task1 {
 
     @FXML
     private TextField inputA;

@@ -8,4 +8,6 @@ module net.yakodan.project {
     exports net.yakodan.project;
     exports net.yakodan.project.fxdialogs;
     opens net.yakodan.project.fxdialogs to javafx.fxml;
+    exports net.yakodan.project.tasks;
+    opens net.yakodan.project.tasks to javafx.fxml;
 }

@@ -1,12 +1,13 @@
-package net.yakodan.project;
+package net.yakodan.project.tasks;
 
+import net.yakodan.project.tasks.Task2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class Task2Test {
 
-    private static Task2Controller task2 = new Task2Controller();
+    private static Task2 task2 = new Task2();
 
     @Test
     @DisplayName("Задание 2. Тест с корректным ответом")

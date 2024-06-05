@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="340.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.Task5Controller">
+<AnchorPane prefHeight="340.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.tasks.Task5">
    <children>
       <Label layoutX="232.0" layoutY="14.0" text="Задание 5">
          <font>
@@ -24,12 +23,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="130.0" text="Введите максимальный размер детали:">
+      <Label layoutX="34.0" layoutY="177.0" text="Введите максимальный размер детали:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="177.0" text="Введите минимальный размер детали:">
+      <Label layoutX="34.0" layoutY="130.0" text="Введите минимальный размер детали:">
          <font>
             <Font size="20.0" />
          </font>
@@ -44,12 +43,12 @@
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="detailMinValueField" layoutX="402.0" layoutY="175.0" prefHeight="25.0" prefWidth="108.0">
+      <TextField fx:id="detailMaxValueField" layoutX="402.0" layoutY="175.0" prefHeight="25.0" prefWidth="108.0">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="detailMaxValueField" layoutX="402.0" layoutY="128.0" prefHeight="25.0" prefWidth="108.0">
+      <TextField fx:id="detailMinValueField" layoutX="402.0" layoutY="128.0" prefHeight="25.0" prefWidth="108.0">
          <font>
             <Font size="16.0" />
          </font>

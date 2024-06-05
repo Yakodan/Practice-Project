@@ -1,6 +1,10 @@
-package net.yakodan.project;
+package net.yakodan.project.tasks;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -8,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import net.yakodan.project.fxdialogs.FxDialogs;
 
-public class Task2Controller {
+public class Task2 extends Application {
 
     @FXML
     private TextField inputQ0;
@@ -58,5 +62,23 @@ public class Task2Controller {
 
     public double calculateMt(double q0, double ft, double alf, double d0){
         return (double) Math.round(q0*ft*((alf+d0)/2)*10000)/10000;
+    }
+
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage stage){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(Task5.class.getResource("task2.fxml"));
+            Parent root = fxmlLoader.load();
+            stage.setTitle("Задание 2");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
