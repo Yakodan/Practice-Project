@@ -1,4 +1,4 @@
-package net.yakodan.project;
+package net.yakodan.project.fxdialogs;
 
 import javafx.scene.control.*;
 import javafx.scene.control.Label;

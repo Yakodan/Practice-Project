@@ -10,15 +10,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainApplication extends Application {
+    public Stage stage;
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("app.fxml"));
         fxmlLoader.setRoot(new AnchorPane());
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Проект");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        this.stage = stage;
+        this.stage.setTitle("Проект");
+        this.stage.setScene(scene);
+        this.stage.setResizable(false);
+        this.stage.show();
     }
 
     public static void main(String[] args) {

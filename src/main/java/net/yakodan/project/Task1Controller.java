@@ -3,6 +3,7 @@ package net.yakodan.project;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import net.yakodan.project.fxdialogs.FxDialogs;
 
 public class Task1Controller {
 

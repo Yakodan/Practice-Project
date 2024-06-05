@@ -44,17 +44,17 @@
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task5Button" layoutX="244.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 5">
+        <Button fx:id="task5Button" layoutX="244.0" layoutY="251.0" mnemonicParsing="false" onAction="#setTask5ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 5">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task6Button" layoutX="430.0" layoutY="251.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 6">
+        <Button fx:id="task6Button" layoutX="430.0" layoutY="251.0" mnemonicParsing="false" onAction="#setTask6ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 6">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="task7Button" layoutX="244.0" layoutY="357.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" text="Задание 7">
+        <Button fx:id="task7Button" layoutX="244.0" layoutY="357.0" mnemonicParsing="false" onAction="#setTask7ButtonClicked" prefHeight="48.0" prefWidth="146.0" text="Задание 7">
             <font>
                 <Font size="18.0" />
             </font>

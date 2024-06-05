@@ -3,6 +3,7 @@ package net.yakodan.project;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import net.yakodan.project.fxdialogs.FxDialogs;
 
 public class Task4Controller {
 
