@@ -16,7 +16,7 @@ public class PolynomialParser {
 
     private final static String NEGATIVE_SIGN = "-";
     private final static String MONOMIAL_TEMPLATE =
-            "([+-])?(\\d+)?(x)?(?:\\^(\\d+))?";
+            "([+-])?(\\d+(?:[.,]\\d+)?)?(x)?(?:\\^(\\d+))?";
 
     /**
      * Получение многочлена одной переменной из строки, записанной в
@@ -25,14 +25,14 @@ public class PolynomialParser {
      */
     public static Polynom parse(String rawPolynomial) {
         String source = normalizeSourceString(rawPolynomial);
-        Map<Integer, Integer> result = new HashMap<>();
+        Map<Integer, Double> result = new HashMap<>();
         Pattern monomial = Pattern.compile(MONOMIAL_TEMPLATE);
         Matcher m = monomial.matcher(source);
         while ((!m.hitEnd() && (m.find()))) {
             boolean isNegative = NEGATIVE_SIGN.equals(m.group(INDEX_SIGN_COEFF));
             int currentDegree = calcDegree(m.group(INDEX_DEGREE),
                     m.group(INDEX_VARIABLE));
-            int currentCoeff = calcCoeff(isNegative, m.group(INDEX_COEFF));
+            double currentCoeff = calcCoeff(isNegative, m.group(INDEX_COEFF));
             result.put(currentDegree, currentCoeff);
         }
         return new Polynom(result);
@@ -41,8 +41,8 @@ public class PolynomialParser {
     /**
      * Вычисление коэффициента одночлена
      */
-    private static int calcCoeff(boolean isNegative, String coefficient) {
-        int result = (coefficient != null) ? Integer.parseInt(coefficient) : 1;
+    private static double calcCoeff(boolean isNegative, String coefficient) {
+        double result = (coefficient != null) ? Double.parseDouble(coefficient) : 1;
         return (isNegative) ? -result : result;
     }
 

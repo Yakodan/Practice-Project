@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import net.yakodan.project.tasks.Task6;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,7 +33,7 @@ public class MainController implements Initializable {
     @FXML
     public void onTask1ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task1.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task1.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 1");
@@ -49,7 +50,7 @@ public class MainController implements Initializable {
     @FXML
     public void onTask2ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task2.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 2");
@@ -66,7 +67,7 @@ public class MainController implements Initializable {
     @FXML
     public void onTask3ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task3.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task3.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 3");
@@ -83,7 +84,7 @@ public class MainController implements Initializable {
     @FXML
     public void onTask4ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task4.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task4.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 4");
@@ -101,14 +102,14 @@ public class MainController implements Initializable {
     @FXML
     public void setTask5ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task5.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task5.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 5");
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initOwner(task4Button.getScene().getWindow());
+            stage.initOwner(task5Button.getScene().getWindow());
             stage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
@@ -117,32 +118,20 @@ public class MainController implements Initializable {
 
     @FXML
     public void setTask6ButtonClicked(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task6.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Задание 6");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initOwner(task4Button.getScene().getWindow());
-            stage.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Task6.showResult();
     }
 
     @FXML
     public void setTask7ButtonClicked(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("task7.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(net.yakodan.project.MainApplication.class.getResource("tasks/task7.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Задание 7");
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initOwner(task4Button.getScene().getWindow());
+            stage.initOwner(task7Button.getScene().getWindow());
             stage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();

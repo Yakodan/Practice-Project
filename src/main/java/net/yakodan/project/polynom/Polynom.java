@@ -1,10 +1,7 @@
 package net.yakodan.project.polynom;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 /**
  * @author FatNinja from comments in
@@ -18,24 +15,34 @@ public class Polynom {
     final static String DEGREE_MARK_1 = "x";
     final static String DEGREE_MARK_NTH = "x^";
 
-    private final Map<Integer, Integer> members
-            = new TreeMap<Integer, Integer>(Collections.reverseOrder());
+    private final Map<Integer, Double> members
+            = new TreeMap<Integer, Double>(Collections.reverseOrder());
 
-    public Polynom(Map<Integer, Integer> members) {
+    public Polynom(Map<Integer, Double> members) {
         this.members.putAll(members);
         deleteMembersWithZeroCoefficient();
+    }
+
+    public double valueOf(double x){
+        double result = 0;
+
+        for(Integer currentKey : members.keySet()){
+            result += members.get(currentKey)*Math.pow(x,currentKey);
+        }
+
+        return (double) Math.round(result * 1000000) /1000000;
     }
 
     /**
      * Сложение
      */
     public Polynom add(Polynom other) {
-        Map<Integer, Integer> result = new TreeMap<Integer, Integer>();
+        Map<Integer, Double> result = new TreeMap<Integer, Double>();
         result.putAll(members);
 
         for (Integer currentKey : other.members.keySet()) {
-            Integer resultValue = other.members.get(currentKey);
-            Integer currentValue = result.get(currentKey);
+            Double resultValue = other.members.get(currentKey);
+            Double currentValue = result.get(currentKey);
             if (currentValue != null) {
                 resultValue += currentValue;
             }
@@ -48,13 +55,13 @@ public class Polynom {
      * Вычитание
      */
     public Polynom subtract(Polynom other) {
-        Map<Integer, Integer> result = new TreeMap<Integer, Integer>();
+        Map<Integer, Double> result = new TreeMap<Integer, Double>();
         result.putAll(members);
 
         for (Integer currentKey : other.members.keySet()) {
-            Integer currentValue = result.get(currentKey);
+            Double currentValue = result.get(currentKey);
             if (currentValue != null) {
-                Integer difference = currentValue - other.members.get(currentKey);
+                Double difference = currentValue - other.members.get(currentKey);
                 result.put(currentKey, difference);
             } else {
                 result.put(currentKey, other.members.get(currentKey));
@@ -67,12 +74,12 @@ public class Polynom {
      * Умножение
      */
     public Polynom multiply(Polynom other) {
-        Map<Integer, Integer> result = new TreeMap<Integer, Integer>();
+        Map<Integer, Double> result = new TreeMap<Integer, Double>();
 
-        for (Entry<Integer, Integer> first : members.entrySet()) {
-            for (Entry<Integer, Integer> second : other.members.entrySet()) {
+        for (Entry<Integer, Double> first : members.entrySet()) {
+            for (Entry<Integer, Double> second : other.members.entrySet()) {
                 Integer amountKey = first.getKey() + second.getKey();
-                Integer productValue = first.getValue() * second.getValue();
+                Double productValue = first.getValue() * second.getValue();
                 if (result.containsKey(amountKey)) {
                     productValue += result.get(amountKey);
                 }
@@ -82,10 +89,19 @@ public class Polynom {
         return new Polynom(result);
     }
 
+    public Polynom divideByNumber(double div){
+        Map<Integer,Double> newMembers = new TreeMap<>();
+        for(Integer currentKey : members.keySet()){
+            double newValue = members.get(currentKey)/div;
+            newMembers.put(currentKey, newValue);
+        }
+        return new Polynom(newMembers);
+    }
+
     private void deleteMembersWithZeroCoefficient() {
-        Iterator<Entry<Integer, Integer>> iterator = members.entrySet().iterator();
+        Iterator<Entry<Integer, Double>> iterator = members.entrySet().iterator();
         while (iterator.hasNext()) {
-            Entry<Integer, Integer> pair = iterator.next();
+            Entry<Integer, Double> pair = iterator.next();
             if (pair.getValue() == 0) {
                 iterator.remove();
             }
@@ -99,7 +115,7 @@ public class Polynom {
      * положительный и одночлен первый в многочлене - возвращается пустая
      * строка. Иначе - " + ";
      */
-    private String viewSignMonomial(boolean isFirst, int coefficient) {
+    private String viewSignMonomial(boolean isFirst, double coefficient) {
         final int MIN_POSITIVE_COEFFICIENT = 0;
         if (coefficient < MIN_POSITIVE_COEFFICIENT) {
             return NEGATIVE_SIGN;
@@ -113,7 +129,7 @@ public class Polynom {
      * от степени. Если коэффициент равен единице или степень нулевая -
      * возвращается пустая строка. Иначе - возвращается коэффициент.
      */
-    private String viewCoefficient(int coeff, int degree) {
+    private String viewCoefficient(double coeff, int degree) {
         return ((coeff != 1) || (degree == 0))
                 ? String.valueOf(coeff)
                 : EMPTY_STRING;
@@ -136,8 +152,8 @@ public class Polynom {
     public String toString() {
         boolean isFirstMember = true;
         StringBuilder builder = new StringBuilder();
-        for (Map.Entry<Integer, Integer> current : members.entrySet()) {
-            int currentCoeff = current.getValue();
+        for (Map.Entry<Integer, Double> current : members.entrySet()) {
+            double currentCoeff = (double) Math.round(current.getValue() * 100) /100;
             int currentDegree = current.getKey();
             builder.append(viewSignMonomial(isFirstMember, currentCoeff));
             builder.append(viewCoefficient(Math.abs(currentCoeff),
