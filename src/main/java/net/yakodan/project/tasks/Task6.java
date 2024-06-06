@@ -1,6 +1,5 @@
 package net.yakodan.project.tasks;
 
-import javafx.scene.chart.Chart;
 import net.yakodan.project.chart.MatlabChart;
 import net.yakodan.project.polynom.Polynom;
 import net.yakodan.project.polynom.PolynomialParser;
@@ -139,5 +138,9 @@ public class Task6 {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    public static void main(String[] args){
+        showResult();
     }
 }

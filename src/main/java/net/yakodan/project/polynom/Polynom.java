@@ -153,7 +153,7 @@ public class Polynom {
         boolean isFirstMember = true;
         StringBuilder builder = new StringBuilder();
         for (Map.Entry<Integer, Double> current : members.entrySet()) {
-            double currentCoeff = (double) Math.round(current.getValue() * 100) /100;
+            double currentCoeff = (double) Math.round(current.getValue() * 10000) /10000;
             int currentDegree = current.getKey();
             builder.append(viewSignMonomial(isFirstMember, currentCoeff));
             builder.append(viewCoefficient(Math.abs(currentCoeff),

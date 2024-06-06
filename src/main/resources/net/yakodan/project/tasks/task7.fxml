@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="net.yakodan.project.tasks.Task7"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="305.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.yakodan.project.tasks.Task7">
+   <children>
+      <Label layoutX="22.0" layoutY="21.0" text="Задание 8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="472.0" layoutY="17.0" mnemonicParsing="false" onAction="#showResults" text="Рассчитать">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="71.0" fitWidth="161.0" layoutX="220.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/task7.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="rectangleLabel" layoutX="18.0" layoutY="126.0" prefHeight="39.0" prefWidth="565.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="trapezeLabel" layoutX="18.0" layoutY="181.0" prefHeight="39.0" prefWidth="565.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="simpsonLabel" layoutX="18.0" layoutY="236.0" prefHeight="39.0" prefWidth="565.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

@@ -71,7 +71,7 @@ public class Task2 extends Application {
     @Override
     public void start(Stage stage){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(Task5.class.getResource("task2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Task2.class.getResource("task2.fxml"));
             Parent root = fxmlLoader.load();
             stage.setTitle("Задание 2");
             stage.setScene(new Scene(root));
